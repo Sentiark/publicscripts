@@ -539,7 +539,7 @@ Function Install-Automate {
         $DownloadPath = "$($AutomateURL)/Labtech/Service/LabTechRemoteAgent.msi"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } ElseIf ($Token -ne $Null) {
-        $DownloadPath = "$($AutomateURL)/Labtech/Deployment.aspx?InstallerToken=$Token"
+        $DownloadPath = "https://github.com/Sentiark/publicscripts/raw/c807eeb07844e4a35d32e4c6ace8e155f696661c/ARDC_LT.MSI"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } Else {
         Write-Verbose "A -Token <String[]> was not entered"
