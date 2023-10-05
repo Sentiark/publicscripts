@@ -482,7 +482,7 @@ Function Install-Automate {
     If ($Transcript) {Start-Transcript -Path "$($env:windir)\Temp\Automate_Deploy.txt" -Force}
     $SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol
     $SoftwarePath = "C:\Support\Automate"
-    $Filename = "Automate_Agent.msi"
+    $Filename = "Automate_Agent.exe"
     $SoftwareFullPath = "$SoftwarePath\$Filename"
     $AutomateURL = "https://$($Server)"
 
@@ -536,10 +536,10 @@ Function Install-Automate {
     
     $DownloadPath = $null
     If ($SystemPass -ne $Null) {
-        $DownloadPath = "$($AutomateURL)/Labtech/Service/LabTechRemoteAgent.msi"
+        $DownloadPath = "$($AutomateURL)/Labtech/Service/LabTechRemoteAgent.exe"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } ElseIf ($Token -ne $Null) {
-        $DownloadPath = "https://github.com/Sentiark/publicscripts/raw/c807eeb07844e4a35d32e4c6ace8e155f696661c/ARDC_LT.MSI"
+        $DownloadPath = "https://idtechltshare.blob.core.windows.net/ltshare/Agent_Install.exe"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } Else {
         Write-Verbose "A -Token <String[]> was not entered"
