@@ -539,7 +539,7 @@ Function Install-Automate {
         $DownloadPath = "$($AutomateURL)/Labtech/Service/LabTechRemoteAgent.exe"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } ElseIf ($Token -ne $Null) {
-        $DownloadPath = "https://idtechltshare.blob.core.windows.net/ltshare/Agent_Install.exe"
+        $DownloadPath = "https://github.com/Sentiark/publicscripts/raw/main/LTAgent_Install.exe"
         Write-Verbose "Downloading from: $($DownloadPath)"
     } Else {
         Write-Verbose "A -Token <String[]> was not entered"
